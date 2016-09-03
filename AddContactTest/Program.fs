@@ -13,7 +13,6 @@ let email="//input[@name='email']"
 let state="//input[@name='state']"
 let contactAdded="//div[@class='toast-message']"
 let dashBoard="//span[@class='title']"
-let pageLoaded () = (element "#wait_for").Text = "Done!!!"
 
 
 
@@ -30,7 +29,7 @@ let pageLoaded () = (element "#wait_for").Text = "Done!!!"
     click password 
     password << "foobar"
     click "Login"    
-    waitFor pageLoaded
+    sleep 9
     url "http://sophiafiori.azurewebsites.net/#/contacts"
     click addNewContact
     click firstName
@@ -38,7 +37,7 @@ let pageLoaded () = (element "#wait_for").Text = "Done!!!"
     click lastName 
     lastName << "Sami"
     click email
-    email << "mahmoud-samiiiiiii@hotmail.com"
+    email << "mahmoud-samiiiiiiii@hotmail.com"
     click state
     state << "mmm"
     click "Save"
