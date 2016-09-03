@@ -44,7 +44,6 @@ let dashBoard="//span[@class='title']"
     contactAdded == "Contact Added Successfully"
 
 
-
 //run all tests
 run()
 
