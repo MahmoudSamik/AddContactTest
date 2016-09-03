@@ -11,6 +11,10 @@ let firstName="//input[@name='firstName']"
 let lastName="//input[@name='lastName']"
 let email="//input[@name='email']"
 let state="//input[@name='state']"
+let contactAdded="//div[@class='toast-message']"
+let dashBoard="//span[@class='title']"
+let pageLoaded () = (element "#wait_for").Text = "Done!!!"
+
 
 
 
@@ -25,22 +29,20 @@ let state="//input[@name='state']"
     userName  << "faisal@foothillsolutions.com"
     click password 
     password << "foobar"
-    click "Login"
-    sleep 9
+    click "Login"    
+    waitFor pageLoaded
     url "http://sophiafiori.azurewebsites.net/#/contacts"
-    sleep 2
     click addNewContact
-    sleep 2
     click firstName
     firstName << "Mahmoudd"
     click lastName 
     lastName << "Sami"
     click email
-    email << "mahmoud-samiii@hotmail.com"
+    email << "mahmoud-samiiiiiii@hotmail.com"
     click state
     state << "mmm"
     click "Save"
-    click "Contacts"
+    contactAdded == "Contact Added Successfully"
 
 
 
